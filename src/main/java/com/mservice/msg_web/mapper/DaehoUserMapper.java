@@ -9,6 +9,8 @@
  */
 package com.mservice.msg_web.mapper;
 
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import com.mservice.msg_web.model.DaehoUser;
@@ -19,5 +21,5 @@ import com.mservice.msg_web.model.DaehoUser;
 @Mapper
 public interface DaehoUserMapper {
 	DaehoUser selectUserById(long id);
-	void insert(DaehoUser user);
+	void insert(Map<String, Object> map);
 }
