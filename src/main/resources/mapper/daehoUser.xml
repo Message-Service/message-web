@@ -2,21 +2,22 @@
 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mservice.msg_web.mapper.DaehoUserMapper">
-    <select id="selectUserById" resultType="com.mservice.msg_web.model.DaehoUser">
+    <select id="selectUserById" parameterType="long" resultType="com.mservice.msg_web.model.DaehoUser">
         SELECT
             id AS id,
             password AS password
         FROM
             daeho_user
+        WHERE id = #{id}
     </select>
 
-    <insert id="insert" parameterType="com.mservice.msg_web.model.DaehoUser">
+    <insert id="insert" parameterType="map">
         INSERT INTO daeho_user (
-            id,
+            user_id,
             password
         )
         VALUES (
-            #{id},
+            #{userId},
             #{password}
         )
     </insert>
