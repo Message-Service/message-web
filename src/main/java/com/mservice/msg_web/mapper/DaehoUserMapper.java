@@ -1,12 +1,3 @@
-/**
- * DaehoUserMapper  2025. 1. 31.
- *
- * Copyright 2025 NAVER Corp.
- * All rights reserved.
- *
- * Except in the case of internal use for NAVER,
- * unauthorized use or redistribution of this software are strongly prohibited.
- */
 package com.mservice.msg_web.mapper;
 
 import java.util.Map;
@@ -20,6 +11,6 @@ import com.mservice.msg_web.model.DaehoUser;
  */
 @Mapper
 public interface DaehoUserMapper {
-	DaehoUser selectUserById(long id);
+	DaehoUser selectUserByUserId(String userId);
 	void insert(Map<String, Object> map);
 }

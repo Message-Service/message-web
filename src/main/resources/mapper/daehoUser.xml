@@ -2,13 +2,14 @@
 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mservice.msg_web.mapper.DaehoUserMapper">
-    <select id="selectUserById" parameterType="long" resultType="com.mservice.msg_web.model.DaehoUser">
+    <select id="selectUserByUserId" parameterType="String" resultType="com.mservice.msg_web.model.DaehoUser">
         SELECT
             id AS id,
+            user_id AS userId,
             password AS password
         FROM
             daeho_user
-        WHERE id = #{id}
+        WHERE user_id = #{userId}
     </select>
 
     <insert id="insert" parameterType="map">
