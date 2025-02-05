@@ -6,7 +6,7 @@ export APP_ENV="production"
 
 # Path 설정
 export APP_HOME="/root/message-web"
-export APP_SCRIPT_PATH="/root/scripts"
+export APP_SCRIPT_PATH="/root/message-web/scripts"
 
 # 적용 확인
 echo "APP_ENV: $APP_ENV"
