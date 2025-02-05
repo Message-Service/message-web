@@ -33,6 +33,8 @@ if [ -n "$BRANCH_NAME" ]; then
         else
                 git -C "$APP_HOME" checkout -b "$BRANCH_NAME"
         fi
+else
+        BRANCH_NAME="develop"
 fi
 
 # pull
